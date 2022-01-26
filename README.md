@@ -1,4 +1,4 @@
-# pushall.sh
+# pushall
 
 This is a very very simple bash script that I use to simplify my git workflow. Normally when you use git on the
 command line, you end up typing out the same three commands over and over-
@@ -9,9 +9,9 @@ command line, you end up typing out the same three commands over and over-
 >
 >git push <branch>
 
-With `pushall.sh`, you would simply write
+With `pushall`, you would simply write
 
-`pushall.sh <commit message> <branch>`
+`pushall <commit message> <branch>`
 
 This is by no means a perfect solution, as it removes a lot of the functionality that git provides like
 adding specific files at a time. But, since most of the time I'm using git for classes or small projects,
@@ -21,7 +21,7 @@ it is a fine substitution to replace all three lines.
 
 The easiest way I have found to install the script is to write it into a .sh file and then run
 
-`install pushall.sh ~/bin`
+`install pushall ~/bin`
 
 This will give it the correct exec permissions off the bat. There are ways to go crazy with this command, but this
 is the method that works for me.
