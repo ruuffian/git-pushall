@@ -21,10 +21,10 @@ it is a fine substitution to replace all three lines.
 
 The easiest way I have found to install the script is to write it into a .sh file and then run
 
-`install pushall ~/bin`
+`install pushall.sh ~/bin`
 
 This will give it the correct exec permissions off the bat. There are ways to go crazy with this command, but this
-is the method that works for me.
+is the method that works for me. I prefer to remove the .sh extension once I am ready to install, so that I can call it with just `pushall` rather than `pushall.sh`.
 
 ### Use
 
@@ -38,3 +38,6 @@ you can always make them more complicated!
 This requires the pushall.sh file to have execution priviliges, as well as git cli working and installed. Beyond that, there aren't any installation requirements that I can 
 think of! Do keep in mind, since this script uses && to sequentially execute the git commands, it will execute them synchronously. This means that if one of them fails,
 the ones before it are still executed. So, if you commit your changes separately then try to use pushall, it will fail at the commit step and not execute the push command.
+  
+  
+Note: If you are writing your own shell script, it can be helpful to name it with the .sh file extension up until you install it. This way, while writing you get syntax highlithing from text editors like vim.
