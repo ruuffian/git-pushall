@@ -28,5 +28,12 @@ is the method that works for me.
 
 ### Use
 
-Right now I use the command by ./'ing it with it's relative directory path. So, if I am in `~/project/folder`, I
-would call `~/bin/pushall.sh <commit message> <branch>`
+If you install with the linux `install` command, you can run pushall the same way you would run any other linux command
+like ls or cd- just type pushall into your command line with the correct args and it should work! I am working on some sort of 
+argument validation or tab-autocompletion, so I'm not 100% on anything more complicated than this. That's the beauty of shell scripts though-
+you can always make them more complicated!
+  
+### Requirements
+  
+This requires the pushall.sh file to have execution priviliges, as well as git cli working and installed. Beyond that, there aren't any requirements that I can 
+  think of!
