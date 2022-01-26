@@ -35,5 +35,6 @@ you can always make them more complicated!
   
 ### Requirements
   
-This requires the pushall.sh file to have execution priviliges, as well as git cli working and installed. Beyond that, there aren't any requirements that I can 
-  think of!
+This requires the pushall.sh file to have execution priviliges, as well as git cli working and installed. Beyond that, there aren't any installation requirements that I can 
+think of! Do keep in mind, since this script uses && to sequentially execute the git commands, it will execute them synchronously. This means that if one of them fails,
+the ones before it are still executed. So, if you commit your changes separately then try to use pushall, it will fail at the commit step and not execute the push command.
