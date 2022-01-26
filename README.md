@@ -2,11 +2,15 @@
 
 This is a very very simple bash script that I use to simplify my git workflow. Normally when you use git on the
 command line, you end up typing out the same three commands over and over-
+
 `git add .`
+
 `git commit -m ""`
+
 `git push <branch>`
 
 With `pushall.sh`, you would simply write
+
 `bin/pushall.sh <commit message> <branch>`
 
 This is by no means a perfect solution, as it removes a lot of the functionality that git provides like
@@ -16,7 +20,9 @@ it is a fine substitution to replace all three lines.
 ### Installation
 
 The easiest way I have found to install the script is to write it into a .sh file and then run
+
 `install script.sh ~/bin`
+
 This will give it the correct exec permissions off the bat. There are ways to go crazy with this command, but this
 is the method that works for me.
 
