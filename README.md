@@ -28,5 +28,5 @@ is the method that works for me.
 
 ### Use
 
-Right now I use the command by ./'ing it with it's relative directory path. So, if I am in ~/project/folder, I
+Right now I use the command by ./'ing it with it's relative directory path. So, if I am in `~/project/folder`, I
 would call `~/bin/pushall.sh <commit message> <branch>`
