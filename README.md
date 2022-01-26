@@ -11,7 +11,7 @@ command line, you end up typing out the same three commands over and over-
 
 With `pushall.sh`, you would simply write
 
-`bin/pushall.sh <commit message> <branch>`
+`pushall.sh <commit message> <branch>`
 
 This is by no means a perfect solution, as it removes a lot of the functionality that git provides like
 adding specific files at a time. But, since most of the time I'm using git for classes or small projects,
@@ -21,7 +21,7 @@ it is a fine substitution to replace all three lines.
 
 The easiest way I have found to install the script is to write it into a .sh file and then run
 
-`install script.sh ~/bin`
+`install pushall.sh ~/bin`
 
 This will give it the correct exec permissions off the bat. There are ways to go crazy with this command, but this
 is the method that works for me.
