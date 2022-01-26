@@ -4,7 +4,9 @@ This is a very very simple bash script that I use to simplify my git workflow. N
 command line, you end up typing out the same three commands over and over-
 
 >git add .
+>
 >git commit -m ""
+>
 >git push <branch>
 
 With `pushall.sh`, you would simply write
