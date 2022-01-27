@@ -41,7 +41,7 @@ the ones before it are still executed. So, if you commit your changes separately
   
 
 ### Argument Validation
-  
+
 In the [validation](https://github.com/ruuffian/script-test-repo/tree/validation) branch you can check out my attempts at implementing argument validation so that the command fails if the arguments are not correct.
 
 Note: If you are writing your own shell script, it can be helpful to name it with the .sh file extension up until you install it. This way, while writing you get syntax highlithing from text editors like vim.

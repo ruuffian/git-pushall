@@ -1,3 +1,24 @@
 #! /bin/bash
 
-git add -v . && git commit -v -s -m "$1" && git push origin "$2"
+choice="y"
+
+if [ "$#" -le "0" ] || [ "$#" -ge "4" ] ; then
+  echo "Command requires pushall <commit message> <branch OPTIONAL>, try again" && exit 1;
+fi
+
+if [ -z "$1" ] ; then
+  echo "Commit message required, try again" && exit 1;
+fi
+
+if [ -z "$2" ] ; then
+  read -n 1 -p "Pushing to defualt branch?(Y/n)" choice;
+  echo "";
+fi
+
+if [ "$#" -eq "2" ] ; then
+  git add -v . && echo "" && git commit -v -s -m "$1" && echo "" && git push origin "$2" && echo "" && exit 0;
+elif [ "$choice" == "y" ] ; then
+  git add -v . && echo "" && git commit -v -s -m "$1" && echo "" && git push origin && echo "" && exit 0;
+fi
+
+exit 0;
