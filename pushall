@@ -2,7 +2,7 @@
 
 choice="y"
 
-if [ "$#" -le "1" || "$#" -ge "3" ] ; then
+if [ "$#" -le "0" ] || [ "$#" -ge "4" ] ; then
   echo "Command requires pushall <commit message> <branch OPTIONAL>, try again" && exit 1;
 fi
 
@@ -11,11 +11,13 @@ if [ -z "$1" ] ; then
 fi
 
 if [ -z "$2" ] ; then
-  read -p "Pushing to defualt branch?(Y/n)" choice;
+  read -n 1 -p "Pushing to defualt branch?(Y/n)" choice;
 fi
 
-if [ "$choice" == "y" ] ; then
+if [ "$#" -eq "2" ] ; then
   git add -v . && git commit -v -s -m "$1" && git push origin "$2" && exit 0;
+elif [ "$choice" == "y" ] ; then
+  git add -v . && git commit -v -s -m "$1" && git push origin && exit 0;
 fi
 
 exit 0;
