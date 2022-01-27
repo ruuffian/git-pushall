@@ -1,3 +1,19 @@
 #! /bin/bash
 
-git add -v . && git commit -v -s -m "$1" && git push origin "$2"
+if [ "$#" -ne 2 ] ; then
+  echo "Command requires pushall <commit message> <branch OPTIONAL>, try again" && exit 1;
+fi
+
+if [ -z "$1" ] ; then
+  echo "Commit message required, try again" && exit 1;
+fi
+
+if [ -z "$2" ] ; then
+  echo "Pushing to defualt branch?(Y/n)" && read -n 1 -p "Input Selection:" choice;
+fi
+
+if [ choice -eq "y" ] ; then
+  git add -v . && git commit -v -s -m "$1" && git push origin "$2" && exit 0;
+fi
+
+exit 0;
