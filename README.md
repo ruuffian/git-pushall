@@ -39,5 +39,9 @@ This requires the pushall.sh file to have execution priviliges, as well as git c
 think of! Do keep in mind, since this script uses && to sequentially execute the git commands, it will execute them synchronously. This means that if one of them fails,
 the ones before it are still executed. So, if you commit your changes separately then try to use pushall, it will fail at the commit step and not execute the push command.
   
+
+### Argument Validation
   
+In the [validation]() branch you can check out my attempts at implementing argument validation so that the command fails if the arguments are not correct.
+
 Note: If you are writing your own shell script, it can be helpful to name it with the .sh file extension up until you install it. This way, while writing you get syntax highlithing from text editors like vim.
