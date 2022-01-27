@@ -2,7 +2,7 @@
 
 choice="y"
 
-if [ "$#" -ne "2" ] ; then
+if [ "$#" -le "1" || "$#" -ge "3" ] ; then
   echo "Command requires pushall <commit message> <branch OPTIONAL>, try again" && exit 1;
 fi
 
